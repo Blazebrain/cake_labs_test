@@ -1,6 +1,6 @@
-# cake_labs_test
+# Cake Labs Test
 
-Test for Mobile Engineer Entry Role for Cake Labs
+Test for Mobile Engineer Role for Cake Labs
 
 ## Folder Architecture
 cake_labs_test/  
