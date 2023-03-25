@@ -26,9 +26,11 @@ class MyApp extends StatelessWidget {
         Provider<PinCodeRepository>.value(value: pinCodeRepository),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter PIN Code Demo',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.deepPurple,
+          scaffoldBackgroundColor: Colors.white,
         ),
         home: const MenuScreen(),
       ),

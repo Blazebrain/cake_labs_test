@@ -10,17 +10,28 @@ class PinCodeIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: List.generate(pinCodeLength, (index) {
-        return Container(
-          width: 20,
-          height: 20,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: index < enteredPinCodeLength ? Colors.blue : Colors.grey,
-          ),
-        );
-      }),
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: List.generate(
+        pinCodeLength,
+        (index) {
+          return Container(
+            width: 10,
+            height: 10,
+            margin: const EdgeInsets.symmetric(horizontal: 16),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: index < enteredPinCodeLength
+                  ? Colors.deepPurple
+                  : Colors.transparent,
+              border: Border.all(
+                color: index < enteredPinCodeLength
+                    ? Colors.transparent
+                    : Colors.grey[400]!,
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }

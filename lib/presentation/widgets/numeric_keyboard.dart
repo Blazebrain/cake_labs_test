@@ -39,11 +39,23 @@ class _NumericKeyboardState extends State<NumericKeyboard> {
   }
 
   Widget _buildButton(String text, {VoidCallback? onPressed}) {
-    return TextButton(
-      onPressed: onPressed,
-      child: Text(
-        text,
-        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+    return Container(
+      margin: const EdgeInsets.all(20),
+      child: TextButton(
+        onPressed: onPressed,
+        style: ButtonStyle(
+          backgroundColor:
+              MaterialStateColor.resolveWith((states) => Colors.grey[200]!),
+          shape: MaterialStateProperty.all(const CircleBorder()),
+        ),
+        child: Text(
+          text,
+          style: TextStyle(
+            color: Colors.grey[700],
+            fontSize: 28,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
       ),
     );
   }
