@@ -8,7 +8,10 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Menu')),
+      appBar: AppBar(
+        title: const Text('Menu'),
+        automaticallyImplyLeading: false,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -18,7 +21,8 @@ class MenuScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const CreatePinCodeScreen()),
+                    builder: (context) => const CreatePinCodeScreen(),
+                  ),
                 );
               },
               child: const Text('Create PIN Code'),
@@ -29,8 +33,8 @@ class MenuScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) =>
-                          const AuthenticationPinCodeScreen()),
+                    builder: (context) => const AuthenticationPinCodeScreen(),
+                  ),
                 );
               },
               child: const Text('Authentication'),

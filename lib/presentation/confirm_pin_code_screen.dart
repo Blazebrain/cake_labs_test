@@ -1,4 +1,5 @@
 import 'package:cake_labs_test/domain/pin_code_repository.dart';
+import 'package:cake_labs_test/presentation/menu_screen.dart';
 import 'package:cake_labs_test/presentation/widgets/numeric_keyboard.dart';
 import 'package:cake_labs_test/presentation/widgets/pin_code_indicator.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,27 @@ class _ConfirmPinCodeScreenState extends State<ConfirmPinCodeScreen> {
   }
 
   void _showMessage(String message) {
-    ScaffoldMessenger.of(context)
-        .showSnackBar(SnackBar(content: Text(message)));
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Confirm PIN Code'),
+          content: Text(message),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MenuScreen(),
+                  ),
+                );
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
   }
 }
