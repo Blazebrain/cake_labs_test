@@ -1,16 +1,49 @@
 # cake_labs_test
 
-A new Flutter project.
+Test for Mobile Engineer Entry Role for Cake Labs
 
-## Getting Started
+## Folder Architecture
+my_app/
+├─ android/
+├─ ios/
+├─ web/
+├─ lib/
+│  ├─ main.dart
+│  ├─ data/
+│  │  └─ local_storage_service.dart
+│  ├─ domain/
+│  │  └─ pin_code_repository.dart
+│  └─ presentation/
+│     ├─ create_pin_code_screen.dart
+│     ├─ authentication_pin_code_screen.dart
+│     ├─ menu_screen.dart
+│     └─ widgets/
+│        ├─ pin_code_indicator.dart
+│        └─ numeric_keyboard.dart
+├─ test/
+├─ assets/
+├─ .gitignore
+├─ .metadata
+├─ .packages
+├─ .flutter-plugins
+├─ .flutter-plugins-dependencies
+├─ pubspec.lock
+└─ pubspec.yaml
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Here is a brief explanation of the key files and folders:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+lib/main.dart: The entry point of the application.
+lib/data: Contains the data access and storage implementation.
+lib/data/local_storage_service.dart: Local storage service using Hive for storing the PIN code.
+lib/domain: Contains the business logic (use cases, entities, etc.).
+lib/domain/pin_code_repository.dart: Repository for handling PIN code-related operations.
+lib/presentation: Contains the UI-related code (widgets, pages, etc.).
+lib/presentation/create_pin_code_screen.dart: Create PIN Code screen.
+lib/presentation/authentication_pin_code_screen.dart: Authentication by PIN Code screen.
+lib/presentation/menu_screen.dart: Menu screen.
+lib/presentation/widgets: Contains custom widgets.
+lib/presentation/widgets/pin_code_indicator.dart: PIN code indicator widget.
+lib/presentation/widgets/numeric_keyboard.dart: Numeric keyboard widget.
+lib/presentation/widgets/result_dialog_widget.dart: Results dialog widget.
+pubspec.yaml: Configuration file for the Flutter project, including dependencies.
