@@ -3,32 +3,29 @@
 Test for Mobile Engineer Entry Role for Cake Labs
 
 ## Folder Architecture
-my_app/
-├─ android/
-├─ ios/
-├─ web/
-├─ lib/
-│  ├─ main.dart
-│  ├─ data/
-│  │  └─ local_storage_service.dart
-│  ├─ domain/
-│  │  └─ pin_code_repository.dart
-│  └─ presentation/
-│     ├─ create_pin_code_screen.dart
-│     ├─ authentication_pin_code_screen.dart
-│     ├─ menu_screen.dart
-│     └─ widgets/
-│        ├─ pin_code_indicator.dart
-│        └─ numeric_keyboard.dart
-├─ test/
-├─ assets/
-├─ .gitignore
-├─ .metadata
-├─ .packages
-├─ .flutter-plugins
-├─ .flutter-plugins-dependencies
-├─ pubspec.lock
-└─ pubspec.yaml
+cake_labs_test/  
+├─ android/  
+├─ ios/  
+├─ web/  
+├─ lib/  
+│  ├─ main.dart  
+│  ├─ data/  
+│  │  └─ local_storage_service.dart  
+│  ├─ domain/  
+│  │  └─ pin_code_repository.dart  
+│  └─ presentation/  
+│     ├─ create_pin_code_screen.dart  
+│     ├─ confirm_pin_code_screen.dart  
+│     ├─ authentication_pin_code_screen.dart  
+│     ├─ menu_screen.dart  
+│     └─ widgets/  
+│        ├─ pin_code_indicator.dart  
+│        └─ numeric_keyboard.dart  
+│        └─ result_dialog_widget.dart  
+├─ test/  
+├─ .gitignore  
+└─ pubspec.yaml  
+
 
 
 Here is a brief explanation of the key files and folders:
